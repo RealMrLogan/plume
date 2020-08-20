@@ -1,41 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './button.css'
+import {css} from '@emotion/core'
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({children}) => {
+const buttonCss = css`
+  box-sizing: box-sizing;
+  padding: 20px;
+  border: 4px solid var(--base-color);
+  transition: var(--tranistion-speed);
+
+  &:hover {
+    background-color: var(--base-color);
+  }
+`
+
+export const Button = ({children, priority}) => {
+  let baseColor
+  switch (priority) {
+    case "high":
+    baseColor = css`--base-color: var(--purple1);`
+    break;
+  default:
+    baseColor = css`--base-color: var(--purple2);`
+  }
+
   return (
-    <button>
+    <button css={[baseColor, buttonCss]}>
       {children}
     </button>
   )
 }
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * Optional click handler
-   */
-  onClick: PropTypes.func,
-}
-
-Button.defaultProps = {
-  children: 'Hello World',
+  children: PropTypes.node,
+  priority: PropTypes.string,
 }
