@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './button.css'
-import {css} from '@emotion/core'
+import {css} from 'emotion'
 
 const buttonCss = css`
   box-sizing: box-sizing;
