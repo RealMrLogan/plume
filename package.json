@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js"
+    "eslint": "node ./node_modules/eslint/bin/eslint.js",
+    "clean-install": "rd -r node_modules; yarn upgrade --production=false"
   },
   "eslintConfig": {
     "extends": "react-app"
