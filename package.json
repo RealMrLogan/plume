@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "emotion": "^10.0.27",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
@@ -19,7 +20,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eslint": "node ./node_modules/eslint/bin/eslint.js",
-    "clean-install": "rd -r node_modules; yarn upgrade --production=false"
+    "install": "yarn upgrade --production=false"
   },
   "eslintConfig": {
     "extends": "react-app"
