@@ -1,13 +1,18 @@
-import React from 'react'
+/** @jsx jsx */
 import PropTypes from 'prop-types'
-import './button.css'
-import { css } from 'emotion'
+import { jsx, css } from '@emotion/core'
 
 const buttonCss = css`
-  box-sizing: box-sizing;
-  padding: 20px;
+  --purple-1: #4319B9;
+  --purple-2: #7662F1;
+  --transition-speed: 300ms;
+
+  box-sizing: border-box;
+  padding: 10px;
   border: 4px solid var(--base-color);
-  transition: var(--tranistion-speed);
+  transition: var(--transition-speed);
+  background-color: white;
+  font-size: 24px;
 
   &:hover {
     background-color: var(--base-color);
@@ -18,10 +23,10 @@ export const Button = ({ children, priority }) => {
   let baseColor
   switch (priority) {
     case 'high':
-      baseColor = css`--base-color: var(--purple1);`
+      baseColor = css`--base-color: var(--purple-1);`
       break
     default:
-      baseColor = css`--base-color: var(--purple2);`
+      baseColor = css`--base-color: var(--purple-2);`
   }
 
   return (
