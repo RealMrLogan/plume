@@ -7,4 +7,5 @@ export default {
   component: Button,
 }
 
-export const Primary = () => <Button priority="low">Hello World</Button>
+export const Primary = () => <Button priority="high">Hello World</Button>
+export const Secondary = () => <Button priority="low">Hello World</Button>

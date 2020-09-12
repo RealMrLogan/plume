@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "eslint": "node ./node_modules/eslint/bin/eslint.js",
-    "install": "yarn upgrade --production=false"
+    "install-dev": "yarn upgrade --production=false"
   },
   "eslintConfig": {
     "extends": "react-app"
